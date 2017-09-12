@@ -1,7 +1,6 @@
 package br.com.caelum.ingresso.validacao;
 
 import static org.junit.Assert.*;
-
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.LocalTime;
@@ -18,7 +17,7 @@ public class SessaoTest {
 	public void oPrecoDaSessaoDeveSerIgualASomaDoPrecoDaSalaMaisOPrecoDoFilme() {
 		
 		Sala sala = new Sala("Eldorado = IMax", new BigDecimal("22.5"));
-		Filme filme = new Filme("Rouge One", Duration.ofMinutes(120),"SCI-FI", new BigDecimal("12.0"));
+		Filme filme = new Filme("Rouge One", Duration.ofMinutes(120), "SCI-FI", new BigDecimal("12.0"));
 		
 		BigDecimal somaDosPrecosDaSalaEFilme = sala.getPreco().add(filme.getPreco());
 		
